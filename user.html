@@ -1,4 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Neha Assistant</title>
+</head>
+<body>
+  <h2>Hello, I am Neha! How can I help you?</h2>
+  <input type="text" id="userInput" placeholder="Type your question..." />
+  <button onclick="getReply()">Send</button>
+  <p id="reply"></p>
 
+  <script>
+    function getReply() {
+      var input = document.getElementById("userInput").value.toLowerCase();
+      var reply = "";
+
+      if (input.includes("love")) {
+        reply = "Love is beautiful. Tell me more!";
+      } else if (input.includes("form fill")) {
+        reply = "I can help you fill out a form. Please upload the document.";
+      } else {
+        reply = "Sorry, I’m still learning. Try something else!";
+      }
+
+      document.getElementById("reply").innerText = reply;
+    }
+  </script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
